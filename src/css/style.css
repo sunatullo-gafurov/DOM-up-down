@@ -4,3 +4,9 @@
 .float-right {
     float: right;
 }
+[data-ul="lists"] {
+    margin-top: 50px;
+}
+[data-total="total"] {
+    margin-top: 50px;
+}

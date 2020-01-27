@@ -6,8 +6,8 @@ const rootEl = document.querySelector('#root').innerHTML = `
         <input data-input="input-category"class="form-control" type="text" value="">
         <button data-action="add-button"type="submit" class="btn btn-success btn-block margin-top">Add</button>
     <form>
-    <ul data-ul="lists" style="margin-top: 50px;" class="list-group"></ul>
-    <div style="margin-top: 50px;"><h5 data-h5="total">TOTAL: 0</h5></div>
+    <ul data-ul="lists" class="list-group"></ul>
+    <div data-total="total"><h5 data-h5="total">TOTAL: 0</h5></div>
 `;
 const inputTotal = document.querySelector('[data-input="input-total"]');
 const inputCategory = document.querySelector('[data-input="input-category"]');

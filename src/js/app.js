@@ -20,7 +20,7 @@ addForm.addEventListener('click', (e) => {
     e.preventDefault();
     const totalValue = inputTotal.value;
     const categoryValue = inputCategory.value;
-    sumOfPurchases += parseInt(totalValue);
+    sumOfPurchases += parseInt(totalValue, null);
     const li = document.createElement('li');
     li.className = 'list-group-item';
     li.innerHTML = `Purchase for $${totalValue} in ${categoryValue} category

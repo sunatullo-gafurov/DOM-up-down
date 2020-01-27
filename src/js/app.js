@@ -4,7 +4,7 @@ const rootEl = document.querySelector('#root').innerHTML = `
         <input data-input="input-total" class="form-control" type="number" min="0" value="">
         <label><h3>Category</h3></label>
         <input data-input="input-category"class="form-control" type="text" value="">
-        <button data-action="add-button"type="submit" style="margin-top: 10px;" class="btn btn-success btn-block">Add</button>
+        <button data-action="add-button"type="submit" class="btn btn-success btn-block margin-top">Add</button>
     <form>
     <ul data-ul="lists" style="margin-top: 50px;" class="list-group"></ul>
     <div style="margin-top: 50px;"><h5 data-h5="total">TOTAL: 0</h5></div>

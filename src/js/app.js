@@ -34,7 +34,7 @@ addForm.addEventListener('click', (e) => {
     total.textContent = `TOTAL: $${sumOfPurchases}`;
     const buttonRemove = li.querySelector('.remove');
     buttonRemove.addEventListener('click', () => {
-        li.remove();
+        lists.removeChild(li);
         sumOfPurchases -= totalValue;
         total.textContent = `TOTAL: $${sumOfPurchases}`
     });

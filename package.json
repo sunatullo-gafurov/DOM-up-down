@@ -4,12 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "live-server src"
+    "start": "live-server src",
+    "deploy": "gh-pages -d src"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "homepage": "https://sunatullo-gafurov.github.io/DOM-up-down",
   "devDependencies": {
     "live-server": "^1.2.1"
+  },
+  "dependencies": {
+    "gh-pages": "^2.2.0"
   }
 }

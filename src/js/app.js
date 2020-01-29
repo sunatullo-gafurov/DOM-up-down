@@ -5,7 +5,7 @@ const rootEl = document.querySelector('#root').innerHTML = `
         <label><h3>Category</h3></label>
         <input data-input="input-category"class="form-control" type="text" value="">
         <button data-action="add-button"type="submit" class="btn btn-success btn-block margin-top">Add</button>
-    <form>
+    </form>
     <ul data-ul="lists" class="list-group"></ul>
     <div data-total="total"><h5 data-h5="total">TOTAL: 0</h5></div>
 `;
@@ -39,13 +39,11 @@ addForm.addEventListener('click', (e) => {
         total.textContent = `TOTAL: $${sumOfPurchases}`
     });
     const buttonUp = li.querySelector('.move-up');
-    buttonUp.addEventListener('click', (e) => {
-        e.preventDefault();
+    buttonUp.addEventListener('click', () => {
         lists.insertBefore(li, li.previousSibling);
     });
     const buttonDown = li.querySelector('.move-down');
-    buttonDown.addEventListener('click', (e) => {
-        e.preventDefault();
+    buttonDown.addEventListener('click', () => {
         if (li == lists.lastChild) {
             lists.insertBefore(li, lists.firstChild);
         } else {

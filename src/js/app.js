@@ -18,9 +18,15 @@ let sumOfPurchases = 0;
 
 addForm.addEventListener('click', (e) => {
     e.preventDefault();
-    const totalValue = inputTotal.value;
+    const value = inputTotal.value;
+    let totalValue = parseInt(value, 10);
     const categoryValue = inputCategory.value;
-    sumOfPurchases += parseInt(totalValue, null);
+    if (isNaN(totalValue)) {
+        sumOfPurchases += 0;
+        totalValue = 0;
+    } else {
+        sumOfPurchases += totalValue;
+    }
     const li = document.createElement('li');
     li.className = 'list-group-item';
     li.innerHTML = `Purchase for $${totalValue} in ${categoryValue} category

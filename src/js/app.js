@@ -46,14 +46,14 @@ addForm.addEventListener('click', (e) => {
     });
     const buttonUp = li.querySelector('.move-up');
     buttonUp.addEventListener('click', () => {
-        lists.insertBefore(li, li.previousSibling);
+        lists.insertBefore(li, li.previousElementSibling);
     });
     const buttonDown = li.querySelector('.move-down');
     buttonDown.addEventListener('click', () => {
-        if (li == lists.lastChild) {
-            lists.insertBefore(li, lists.firstChild);
+        if (li == lists.lastElementChild) {
+            lists.insertBefore(li, lists.firstElementChild);
         } else {
-        lists.insertBefore(li.nextSibling, li);
+        lists.insertBefore(li.nextElementSibling, li);
         }
     });
     inputTotal.value = '';

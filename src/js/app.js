@@ -1,22 +1,22 @@
-const rootEl = document.querySelector('#root').innerHTML = `
-    <form>
-        <label><h3>Total</h3></label>
+const rootEl = document.getElementById('root').innerHTML = `
+    <form data-action="submit-form">
+        <label>Total</label>
         <input data-input="input-total" class="form-control" type="number" min="0" value="">
-        <label><h3>Category</h3></label>
+        <label>Category</label>
         <input data-input="input-category"class="form-control" type="text" value="">
-        <button data-action="add-button"type="submit" class="btn btn-success btn-block margin-top">Add</button>
+        <button type="submit" class="btn btn-success btn-block margin-top">Add</button>
     </form>
     <ul data-ul="lists" class="list-group"></ul>
-    <div data-total="total"><h5 data-h5="total">TOTAL: 0</h5></div>
+    <div data-total="total">TOTAL: 0</div>
 `;
 const inputTotal = document.querySelector('[data-input="input-total"]');
 const inputCategory = document.querySelector('[data-input="input-category"]');
-const addForm = document.querySelector('[data-action="add-button"]');
+const addForm = document.querySelector('[data-action="submit-form"]');
 const lists = document.querySelector('[data-ul="lists"]');
-const total = document.querySelector('[data-h5="total"]');
+const total = document.querySelector('[data-total="total"]');
 let sumOfPurchases = 0;
 
-addForm.addEventListener('click', (e) => {
+addForm.addEventListener('submit', (e) => {
     e.preventDefault();
     const value = inputTotal.value;
     let totalValue = parseInt(value, 10);

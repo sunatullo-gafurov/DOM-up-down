@@ -1,4 +1,6 @@
-const rootEl = document.getElementById('root').innerHTML = `
+const rootEl = document.getElementById('root'); 
+
+rootEl.innerHTML = `
     <form data-action="submit-form">
         <label>Total</label>
         <input data-input="input-total" class="form-control" type="number" min="0" value="">
